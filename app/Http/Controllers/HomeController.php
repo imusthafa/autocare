@@ -2,7 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Request;
+use App\Services;
+use Auth;
 
 class HomeController extends Controller
 {
@@ -23,6 +25,21 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $services=services::where('userid',auth::user()->id)->get();
+         return view('home',compact('services'));
+        
+  
+    }
+    public function newService()
+    {
+        return view('newService');
+    }
+
+    public function storeService()
+    {
+        $req = Request::all();
+        $req['userid'] = Auth::user()->id;
+        Services::create($req);
+        return redirect('/home');
     }
 }

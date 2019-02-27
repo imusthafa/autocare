@@ -2,22 +2,33 @@
 
 @section('content')
 <div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">Dashboard</div>
+  
+  
+<a href="{{ url('/services/new') }}" class="btn btn-success">New Service</a>
+<table class="table table-striped">
+  <thead>
+   <td> <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Category</th>
+      <th scope="col">Location</th>
+      <th scope="col">Action <div class="form-group">
 
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
+    
+    </th>
+   </tr>
+  </thead>
+  <tbody>
+    
+  @foreach($services as $service)
+    <tr>    
+      <th>{{$service->name}}</th>
+      
+               
+    </tr>
+@endforeach
+  </tbody>
+</table>
 
-                    You are logged in!
-                </div>
-            </div>
-        </div>
-    </div>
 </div>
+
 @endsection
