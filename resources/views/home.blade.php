@@ -10,19 +10,22 @@
    <td> <tr>
       <th scope="col">Name</th>
       <th scope="col">Category</th>
+      <th scope="col">address</th>
       <th scope="col">Location</th>
-      <th scope="col">Action <div class="form-group">
-
-    
-    </th>
+      <th scope="col">Action </th>
    </tr>
   </thead>
   <tbody>
     
   @foreach($services as $service)
     <tr>    
-      <th>{{$service->name}}</th>
-      
+      <td>{{$service->name}}</td>
+      <td>{{$service->category}}</td>
+      <td>{{$service->location}}</td>
+    <td> 
+    <a href ="{{ url('/service/delete/'.$service->id) }}" class="btn btn-success">Delete </a>
+    <a href ="{{ url('/service/edit/'.$service->id) }}" class="btn btn-success">Edit </a>
+    </td>
                
     </tr>
 @endforeach

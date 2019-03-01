@@ -4,27 +4,27 @@
 
 <div class="container">
 
-<form method="POST" action="{{ url('services/new') }}">
+<form method="POST" action="{{ url('service/edit/'.$service->id) }}">
 {{ csrf_field() }}
 
 
 <div class="form-group">
 <label>Shop Name </label>
-<input type="text" placeholder="Shop Name" class="form-control" name="name" />
+<input type="text" placeholder="Shop Name" class="form-control" name="name" value="{{ $service->name}}" />
 </div>
 
 <div class="form-group">
 <label>Description </label>
-<textarea  placeholder="Description" class="form-control" name="description" ></textarea>
+<textarea  placeholder="Description" class="form-control" name="description">{{ $service->description}}</textarea>
 </div>
 <div class="form-group">
 <label>Description </label>
-<textarea  placeholder="Address" class="form-control" name="Address" ></textarea>
+<textarea  placeholder="Address" class="form-control" name="Address">{{ $service->description}}</textarea>
 </div>
 
 <div class="form-group">
 <label>Location </label>
-<input type="text" placeholder="Location" class="form-control" name="location" />
+<input type="text" placeholder="Location" class="form-control" name="location" value="{{ $service->location}}" />
 </div>
 
 <div class="form-group">

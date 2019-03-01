@@ -9,7 +9,8 @@ class Feedback extends Model
         protected $fillable = [
             'name',
             'email',
-            'message'
+            'message',
+            'serviceid'
         ];
     
         protected $hidden = [

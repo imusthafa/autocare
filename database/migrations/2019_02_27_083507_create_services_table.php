@@ -17,6 +17,7 @@ class CreateServicesTable extends Migration
             $table->bigIncrements('id');
             $table->string('name');
             $table->string('description');
+            $table->string('address');
             $table->string('lat')->nullable();
             $table->string('lon')->nullable();
             $table->string('location');

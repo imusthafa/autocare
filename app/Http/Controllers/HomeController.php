@@ -25,7 +25,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $services=services::where('userid',auth::user()->id)->get();
+       $services=services::where('userid',auth::user()->id)->get();
          return view('home',compact('services'));
         
   
@@ -42,4 +42,29 @@ class HomeController extends Controller
         Services::create($req);
         return redirect('/home');
     }
+       public function deleteService($id)
+         {
+             $services=Services::findOrFail($id);
+             $services->delete();
+    return redirect('/home');
+          }
+       public function editService($id)
+         {
+             $service=Services::findOrFail($id);
+              return view('editService',compact('service'));    
+
+            }
+
+ 
+    public function updateService($id)
+    {
+        $msg = Services::findOrFail($id);
+        $req = Request::all();
+        $msg->update($req);
+         return redirect('/');
+    }
+
 }
+
+
+
