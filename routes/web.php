@@ -33,7 +33,7 @@ Route::get('admin/user/edit/{id}','AdminController@editUser');
 Route::post('admin/user/edit/{id}','AdminController@updateUser');
 Route::get('admin/user/delete/{id}','AdminController@deleteUser');
 
-
+//AdminController
 Route::get('admin/services','AdminController@services');
 Route::get('admin/service/edit/{id}','AdminController@editService');
 Route::post('admin/service/edit/{id}','AdminController@updateService');

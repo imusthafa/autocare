@@ -1,17 +1,15 @@
-@extends('layouts.app')
-
+@extends('layouts.admin')
 @section('content')
+
 <div class="container">
-  
-  
-<a href="{{ url('/services/new') }}" class="btn btn-success">New Service</a>
+
 <table class="table table-striped">
   <thead>
    <td> <tr>
       <th scope="col">Name</th>
       <th scope="col">Category</th>
-      <th scope="col">address</th> 
-      <th scope="col">Location</th>
+      <th scope="col">location</th> 
+      <th scope="col">address</th>
       <th scope="col">Action </th>
    </tr>
   </thead>
@@ -29,12 +27,13 @@
       @endif 
       
       
+      
       </td>
       <td>{{$service->location}}</td>
       <td>{{$service->address}}</td>
     <td> 
-    <a href ="{{ url('/service/delete/'.$service->id) }}" class="btn btn-success">Delete </a>
-    <a href ="{{ url('/service/edit/'.$service->id) }}" class="btn btn-success">Edit </a>
+    <a href ="{{ url('admin/service/delete/'.$service->id) }}" class="btn btn-success">Delete </a>
+    <a href ="{{ url('admin/service/edit/'.$service->id) }}" class="btn btn-success">Edit </a>
     </td>
                
     </tr>
@@ -43,5 +42,4 @@
 </table>
 
 </div>
-
 @endsection

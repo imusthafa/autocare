@@ -21,7 +21,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
             <div class="container">
                 <a class="navbar-brand" href="{{ url('/') }}">
                     {{ config('app.name', 'Laravel') }}
@@ -38,6 +38,9 @@
 
                     <!-- Right Side Of Navbar -->
                     <ul class="navbar-nav ml-auto">
+
+                    <li class="nav-item">                    <a href="{{ url('admin/users') }}" class="nav-link">Users</a></li>
+                    <li class="nav-item">                    <a href="{{ url('admin/services') }}" class="nav-link">Services</a></li>
                         <!-- Authentication Links -->
                         @guest
                             <li class="nav-item">
@@ -77,7 +80,7 @@
         </main>
     </div>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     @include('flashy::message')
 

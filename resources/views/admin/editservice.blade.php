@@ -1,10 +1,10 @@
-@extends('layouts.app')
+@extends('layouts.admin')
 
 @section('content')
 
 <div class="container">
 
-<form method="POST" action="{{ url('service/edit/'.$service->id) }}">
+<form method="POST" action="{{ url('admin/service/edit/'.$service->id) }}">
 {{ csrf_field() }}
 
 

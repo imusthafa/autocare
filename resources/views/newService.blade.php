@@ -17,10 +17,10 @@
 <label>Description </label>
 <textarea  placeholder="Description" class="form-control" name="description" ></textarea>
 </div>
-<div class="form-group">
-<label>Description </label>
-<textarea  placeholder="Address" class="form-control" name="Address" ></textarea>
-</div>
+ <div class="form-group">
+<label>Address </label>
+<textarea  placeholder="Address" class="form-control" name="address" ></textarea>
+</div> 
 
 <div class="form-group">
 <label>Location </label>

@@ -59,9 +59,9 @@ class HomeController extends Controller
     public function updateService($id)
     {
         $msg = Services::findOrFail($id);
-        $req = Request::all();
+         $req = Request::all();
         $msg->update($req);
-         return redirect('/');
+         return redirect('/home');
     }
 
 }
