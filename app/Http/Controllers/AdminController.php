@@ -14,6 +14,12 @@ class AdminController extends Controller
         $this->middleware('auth');
     }
 
+    public function dashboard(){
+      $users = User::count();
+
+      return view('admin.dashboard',compact('users'));
+    }
+
     public function users()
     {
      $users = User::paginate(10);

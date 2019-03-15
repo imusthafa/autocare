@@ -28,6 +28,7 @@ Route::get('feedback','FeedbackController@feedback');
 Route::post('feedback','FeedbackController@storeFeedback');
 Route::get('feedbacks','FeedbackController@viewFeedbacks');
 //AdminController
+Route::get('/admin','AdminController@dashboard');
 Route::get('admin/users','AdminController@users');
 Route::get('admin/user/edit/{id}','AdminController@editUser');
 Route::post('admin/user/edit/{id}','AdminController@updateUser');
