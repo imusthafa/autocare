@@ -30,6 +30,10 @@ class HomeController extends Controller
         
   
     }
+    public function searchResult()
+    {
+        return view('searchResult');
+    }
     public function newService()
     {
         return view('newService');

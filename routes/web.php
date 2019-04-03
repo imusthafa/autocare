@@ -15,9 +15,12 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+
+Route::get('shop/{id}','PageController@shopDetails');
 Auth::routes();
 //HomeController
 Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/search','HomeController@searchResult');
 Route::get('services/new','HomeController@newService');
 Route::post('services/new','HomeController@storeService');
 Route::get('service/delete/{id}','HomeController@deleteService');

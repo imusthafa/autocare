@@ -16,8 +16,14 @@ class AdminController extends Controller
 
     public function dashboard(){
       $users = User::count();
+      $newUsers = User::orderBy('id','desc')->get()->take(5);
+      $service = Services::count();
+      $newService = Services::orderBy('id','desc')->get()->take(5);
+      return view('admin.dashboard',compact('users','newUsers','service','newService'));
+  //service view in admin dashbord
 
-      return view('admin.dashboard',compact('users'));
+      
+      
     }
 
     public function users()
@@ -57,6 +63,8 @@ class AdminController extends Controller
      {
        $service=Services::findOrFail($id);
        $service->delete();
+       Flashy::success('Service deleted successfully', '');
+
        return redirect('/admin/service');
     } 
     public function editService($id)
@@ -69,6 +77,8 @@ class AdminController extends Controller
        $msg=Services::findOrFail($id);
        $req=Request::all();
        $msg->update($req);
+       Flashy::success('Service updated successfully', '');
+
        return redirect('/admin/services');
     }        
 }
