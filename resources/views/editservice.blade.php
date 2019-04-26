@@ -14,6 +14,11 @@
         </div>
 
         <div class="form-group">
+            <label>Image </label>
+            <input type="text" placeholder="Image URL" class="form-control" name="image" value="{{ $service->image }}" />
+        </div>
+
+        <div class="form-group">
             <label>Description </label>
             <textarea placeholder="Description" class="form-control" name="description">{{ $service->description}}</textarea>
         </div>

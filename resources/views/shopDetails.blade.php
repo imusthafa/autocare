@@ -13,6 +13,9 @@
 
       <div class="card" style="width: 18rem;">
         <div class="card-body">
+        <p>
+        <img src="{{ $shop->image }}" />
+        </p>
           <h2 class="card-title">{{$shop->name}}</h2>
           <p class="card-text">{{$shop->description}}</p>
 

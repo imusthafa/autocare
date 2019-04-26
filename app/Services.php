@@ -10,6 +10,7 @@ class Services extends Model
             'name',
             'description',
             'address',
+            'image',
             'lat',
             'lon',
             'location',

@@ -17,6 +17,9 @@
             <b> {{$shop->name}}</b>
           </div>
           <div class="panel-body">
+          <img src="{{ $shop->image }}" />
+
+
             <p>
               {{$shop->description}}
             </p>
