@@ -94,7 +94,7 @@
                   </li> 
                   <div class="dropdown">
                   <a href="#" class="nav-link pr-0 leading-none" data-toggle="dropdown">
-                    <span class="avatar" style="background-image: url(./demo/faces/female/25.jpg)"></span>
+                    <span class="avatar" style="background-image: url(https://pbs.twimg.com/profile_images/722832661346140160/ObkAAve-_400x400.jpg)"></span>
                     <span class="ml-2 d-none d-lg-block">
                       <span class="text-default">Musthafa</span>
                       <small class="text-muted d-block mt-1">Administrator</small>
